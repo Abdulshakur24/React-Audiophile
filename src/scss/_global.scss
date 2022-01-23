@@ -1,0 +1,23 @@
+.hide-at-425px {
+  @include breakpoint-up(small) {
+    display: none !important;
+  }
+}
+
+.hide-at-640px {
+  @include breakpoint-up(medium) {
+    display: none !important;
+  }
+}
+
+.hide-at-1024px {
+  @include breakpoint-up(large) {
+    display: none !important;
+  }
+}
+
+.hide-at-1440px {
+  @include breakpoint-up(xlarge) {
+    display: none !important;
+  }
+}
