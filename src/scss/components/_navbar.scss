@@ -4,8 +4,13 @@
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid #434343;
+
   @include breakpoint-up(medium) {
     border-bottom: unset;
+    background-color: rgb(18, 18, 18);
+  }
+  @include breakpoint-up(large) {
+    background-color: rgb(18, 18, 18);
   }
 
   .navbar-container {
@@ -50,6 +55,7 @@
       grid-template: 1fr / minmax(auto, 20px) 1fr 1fr;
       margin: 0 38px;
       border-bottom: 1px solid var(--background-darkgray);
+      max-height: 89px;
       .b {
         justify-self: flex-start;
         margin-left: 40px;
@@ -61,6 +67,7 @@
     }
     @include breakpoint-up(large) {
       grid-template: 1fr / 1fr 1fr 1fr;
+      max-height: 96px;
       .desktop {
         display: flex;
         // justify-content: space-between;
