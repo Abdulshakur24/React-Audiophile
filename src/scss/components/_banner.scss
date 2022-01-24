@@ -1,0 +1,65 @@
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(18, 18, 18);
+  @include breakpoint-up(medium) {
+    background-color: rgb(18, 18, 18);
+  }
+  @include breakpoint-up(large) {
+    background-color: rgb(18, 18, 18);
+  }
+
+  .banner-container {
+    height: 510px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    max-width: 1110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("../../assets/mobile/image-hero-1.jpg");
+    @include breakpoint-up(medium) {
+      height: 640px;
+      background-image: url("../../assets/tablet/image-hero-1.jpg");
+    }
+    @include breakpoint-up(large) {
+      margin: 0 38px;
+      justify-content: flex-start;
+      height: 632px;
+      background-image: url("../../assets/desktop/image-hero-1.jpg");
+    }
+
+    .banner-contents {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      width: 328px;
+      height: 290px;
+
+      @include breakpoint-up(large) {
+        width: 100%;
+        text-align: start;
+        align-items: flex-start;
+        width: 379px;
+        height: 346px;
+        justify-self: flex-start;
+      }
+
+      h1 {
+        font-size: 36px;
+        color: var(--text-secondary);
+      }
+      p {
+        font-size: 15px;
+        max-width: 345px;
+        color: #c6c6c6;
+      }
+    }
+  }
+}
