@@ -1,0 +1,116 @@
+.products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .products-container {
+    width: 100%;
+    max-width: 1110px;
+    margin: 92px 24px 120px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint-up(medium) {
+      margin: 148px 39px 96px 39px;
+    }
+    @include breakpoint-up(large) {
+      margin: 199px 39px 169px 39px;
+    }
+    .products-contents {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 327px;
+      gap: 68px;
+
+      @include breakpoint-up(medium) {
+        max-width: unset;
+        flex-direction: row;
+        gap: 10px;
+      }
+
+      .box {
+        width: 100%;
+        height: 100vh;
+        max-width: 327px;
+        max-height: 165px;
+
+        @include breakpoint-up(large) {
+          max-width: 350px;
+          max-height: 204px;
+        }
+        background-color: var(--background-gray);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        border-radius: 8px;
+
+        h6 {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 15px;
+          line-height: 20px;
+          text-align: center;
+          letter-spacing: 1.07143px;
+          text-transform: uppercase;
+        }
+
+        .image {
+          z-index: 10;
+          position: absolute;
+          transform: translateY(-110px);
+          filter: drop-shadow(0rem 2.5rem 20px #b2b2b2);
+          @include breakpoint-up(large) {
+            transform: translateY(-125px);
+          }
+        }
+
+        .button {
+          margin-bottom: 0.5rem;
+        }
+
+        .headphone {
+          width: 79.92px;
+          height: 104px;
+          background-position: bottom;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-image: url("../../assets/mobile/mobile-headphone.png");
+          @include breakpoint-up(large) {
+            width: 122.9px;
+            height: 160px;
+            background-image: url("../../assets/desktop/desktop-headphone.png");
+          }
+        }
+        .speaker {
+          width: 84.04px;
+          height: 101px;
+          background-position: bottom;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-image: url("../../assets/mobile/mobile-speaker.png");
+          @include breakpoint-up(large) {
+            width: 121.49px;
+            height: 146px;
+            background-image: url("../../assets/desktop/desktop-speaker.png");
+          }
+        }
+        .earphone {
+          width: 103px;
+          height: 104px;
+          background-position: bottom;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-image: url("../../assets/mobile/mobile-earphone.png");
+          @include breakpoint-up(large) {
+            width: 125px;
+            height: 126px;
+            background-image: url("../../assets/desktop/desktop-earphone.png");
+          }
+        }
+      }
+    }
+  }
+}
