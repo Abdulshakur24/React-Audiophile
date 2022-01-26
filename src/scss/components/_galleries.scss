@@ -1,0 +1,248 @@
+.galleries {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .galleries-container {
+    width: 100%;
+    max-width: 1110px;
+    margin: 0 24px 120px 24px;
+    @include breakpoint-up(medium) {
+      margin: 0 39px 96px 39px;
+    }
+    @include breakpoint-up(large) {
+      margin: 0 40px 200px 40px;
+    }
+
+    .galleries-contents {
+      display: grid;
+      grid-template: minmax(auto, 600px) minmax(auto, 320px) minmax(auto, 424px) / 1fr;
+      gap: 24px;
+      @include breakpoint-up(medium) {
+        grid-template:
+          minmax(auto, 720px) minmax(auto, 320px) minmax(auto, 320px)
+          / 1fr;
+        gap: 32px;
+      }
+
+      @include breakpoint-up(large) {
+        grid-template:
+          minmax(auto, 560px) minmax(auto, 320px) minmax(auto, 320px)
+          / 1fr;
+        gap: 48px;
+      }
+
+      .row-one {
+        background-color: var(--background-orange);
+        border-radius: 8px;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("../../assets/mobile/mobile.svg");
+        @include breakpoint-up(small) {
+          background-size: cover;
+        }
+        @include breakpoint-up(medium) {
+          background-size: contain;
+          background-image: url("../../assets/tablet/tablet.svg");
+        }
+        @include breakpoint-up(large) {
+          background-image: url("../../assets/desktop/desktop.svg");
+          background-position: initial;
+        }
+
+        display: grid;
+        grid-template: 1fr 1fr / 1fr;
+        justify-items: center;
+        align-items: center;
+        @include breakpoint-up(large) {
+          display: flex;
+          justify-content: space-evenly;
+        }
+
+        .speaker {
+          width: 172.25px;
+          height: 207px;
+          background-position: top;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-image: url("../../assets/mobile/row-one-speaker.png");
+          @include breakpoint-up(small) {
+            background-size: cover;
+          }
+          @include breakpoint-up(medium) {
+            width: 197.21px;
+            height: 237px;
+            background-size: contain;
+            background-image: url("../../assets/tablet/row-one-speaker.png");
+          }
+          @include breakpoint-up(large) {
+            align-self: flex-end;
+            width: 410.23px;
+            height: 464px;
+            background-image: url("../../assets/desktop/row-one-speaker.png");
+            background-position: initial;
+          }
+        }
+
+        .details {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          height: 100%;
+          max-width: 280px;
+          height: 303px;
+          @include breakpoint-up(medium) {
+            max-width: 349px;
+            height: 303px;
+            justify-content: space-around;
+          }
+          @include breakpoint-up(large) {
+            align-items: flex-start;
+          }
+
+          h2 {
+            width: 190px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 40px;
+            color: var(--text-secondary);
+            text-align: center;
+            letter-spacing: 1.28571px;
+            text-transform: uppercase;
+            @include breakpoint-up(medium) {
+              width: 260px;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 56px;
+              line-height: 58px;
+              text-align: center;
+              letter-spacing: 2px;
+            }
+            @include breakpoint-up(large) {
+              text-align: start;
+            }
+          }
+          p {
+            text-align: center;
+            color: #f5ded2;
+            @include breakpoint-up(medium) {
+              margin-top: 24px;
+              margin-bottom: 35px;
+            }
+            @include breakpoint-up(large) {
+              text-align: start;
+            }
+          }
+          .button {
+            margin-bottom: 55px;
+            @include breakpoint-up(medium) {
+              margin-bottom: 30px;
+              transform: translateY(15px);
+            }
+          }
+        }
+      }
+
+      .row-two {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 8px;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("../../assets/mobile/zx7-speaker-background-mobile.png");
+        @include breakpoint-up(medium) {
+          background-image: url("../../assets/tablet/zx7-speaker-background-tablet.png");
+        }
+        @include breakpoint-up(large) {
+          background-image: url("../../assets/desktop/zx7-speaker-background-desktop.png");
+        }
+
+        .wrapper {
+          width: 204px;
+          height: 118px;
+          margin-left: 24px;
+          @include breakpoint-up(medium) {
+            margin-left: 62px;
+          }
+          @include breakpoint-up(large) {
+            margin-left: 95px;
+          }
+
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          h2 {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 38px;
+            letter-spacing: 2px;
+          }
+        }
+      }
+
+      .row-three {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        @include breakpoint-up(medium) {
+          flex-direction: row;
+          gap: 11px;
+        }
+        @include breakpoint-up(medium) {
+          gap: 30px;
+        }
+
+        .image {
+          flex: 1;
+          width: 100%;
+          height: 100%;
+          border-radius: 8px;
+          background-position: top;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-image: url("../../assets/mobile/image-earphones-yx1.jpg");
+          @include breakpoint-up(medium) {
+            background-image: url("../../assets/tablet/image-earphones-yx1.jpg");
+          }
+          @include breakpoint-up(large) {
+            background-image: url("../../assets/desktop/image-earphones-yx1.jpg");
+          }
+        }
+
+        .details {
+          background-color: var(--background-gray);
+          flex: 1;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          border-radius: 8px;
+
+          .wrapper {
+            width: 247px;
+            height: 118px;
+            margin-left: 24px;
+            @include breakpoint-up(medium) {
+              margin-left: 41px;
+            }
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            h2 {
+              font-style: normal;
+              font-weight: bold;
+              font-size: 28px;
+              line-height: 38px;
+              letter-spacing: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
