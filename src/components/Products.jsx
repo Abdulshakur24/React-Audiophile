@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonThree from "./ButtonThree";
+import ButtonShop from "./ButtonShop";
 
 function Products() {
   return (
@@ -9,17 +9,17 @@ function Products() {
           <div className="box headphones">
             <div className="image headphone" />
             <h6>HEADPHONES</h6>
-            <ButtonThree className="button" text={"SHOP"} />
+            <ButtonShop className="button" text={"SHOP"} />
           </div>
           <div className="box speakers">
             <div className="image speaker" />
             <h6>SPEAKERS</h6>
-            <ButtonThree className="button" text={"SHOP"} />
+            <ButtonShop className="button" text={"SHOP"} />
           </div>
           <div className="box earphones">
             <div className="image earphone" />
             <h6>EARPHONES</h6>
-            <ButtonThree className="button" text={"SHOP"} />
+            <ButtonShop className="button" text={"SHOP"} />
           </div>
         </div>
       </div>

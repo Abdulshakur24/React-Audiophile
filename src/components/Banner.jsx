@@ -1,6 +1,6 @@
 import React from "react";
 import Title from "./Title";
-import ButtonOne from "./ButtonOne";
+import ButtonOrange from "./ButtonOrange";
 
 function Banner() {
   return (
@@ -13,7 +13,7 @@ function Banner() {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
           </p>
-          <ButtonOne text={"SEE PRODUCT"} />
+          <ButtonOrange text={"SEE PRODUCT"} />
         </div>
       </div>
     </div>
