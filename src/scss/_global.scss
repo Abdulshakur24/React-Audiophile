@@ -1,10 +1,10 @@
-.hide-at-425px {
+.hide-at-500px {
   @include breakpoint-up(small) {
     display: none !important;
   }
 }
 
-.hide-at-640px {
+.hide-at-768px {
   @include breakpoint-up(medium) {
     display: none !important;
   }
@@ -19,5 +19,38 @@
 .hide-at-1440px {
   @include breakpoint-up(xlarge) {
     display: none !important;
+  }
+}
+
+.MuiSkeleton-root {
+  transition: all 200ms ease-in-out;
+  background: var(--loading-bg);
+
+  &::after {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--loading-sg),
+      transparent
+    );
+  }
+}
+
+.MuiButton-root {
+  border-radius: 0;
+}
+
+a {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 25px;
+  color: var(--text-secondary);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 150ms ease-in-out;
+  text-decoration: none;
+  &:hover {
+    color: var(--text-tertiary);
   }
 }
