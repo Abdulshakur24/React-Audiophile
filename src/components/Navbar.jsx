@@ -1,15 +1,8 @@
-import React, { useState, useEffect } from "react";
-
+import React from "react";
 import { ReactComponent as Audiophile } from "../assets/Audiophile.svg";
 import { ReactComponent as TrolleyIcon } from "../assets/TrolleyIcon.svg";
 
 function Header() {
-  const [loading, setLoading] = useState(true);
-  console.log(loading);
-  useEffect(() => {
-    setTimeout(() => setLoading(false), 5000);
-  }, []);
-
   return (
     <div className="navbar">
       <div className="navbar-container">
